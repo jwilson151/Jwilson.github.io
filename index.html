@@ -1,2 +1,689 @@
 <h1>Pastor Justin Wilson, A.A.</h1>
-<p>Website coming soon.</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Pastor Justin Wilson, A.A. | Pastor • Educator • Speaker</title>
+
+<meta name="description" content="Pastor Justin Wilson is an ordained pastor, educator, youth advocate, speaker, and author committed to developing the next generation.">
+
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4efe6;
+  color: #151515;
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* NAVIGATION */
+
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 7%;
+  color: white;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.navlinks {
+  display: flex;
+  gap: 28px;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 100vh;
+  background: #17392f;
+  color: white;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  overflow: hidden;
+}
+
+.hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 130px 8% 80px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 12px;
+  margin-bottom: 25px;
+  color: #d4bd86;
+}
+
+.hero h1 {
+  font-size: clamp(55px, 7vw, 110px);
+  line-height: .9;
+  letter-spacing: -3px;
+  margin-bottom: 30px;
+}
+
+.hero h1 span {
+  display: block;
+  font-style: italic;
+  color: #d4bd86;
+}
+
+.hero-description {
+  max-width: 560px;
+  font-size: 18px;
+  color: #e8e3d9;
+  margin-bottom: 38px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 25px;
+  border: 1px solid #d4bd86;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.button.primary {
+  background: #d4bd86;
+  color: #17392f;
+}
+
+.hero-image {
+  min-height: 100vh;
+  background-image:
+    linear-gradient(to right, #17392f 0%, transparent 25%),
+    url('D98D0CC6-8F24-44CA-934C-8497C6859DCA.jpeg');
+  background-size: cover;
+  background-position: center top;
+}
+
+/* GENERAL SECTIONS */
+
+section {
+  padding: 100px 8%;
+}
+
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 11px;
+  color: #846f44;
+  margin-bottom: 20px;
+}
+
+.section-title {
+  font-size: clamp(45px, 6vw, 82px);
+  line-height: 1;
+  margin-bottom: 35px;
+}
+
+/* ABOUT */
+
+.about {
+  display: grid;
+  grid-template-columns: .8fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.big-number {
+  font-family: Georgia, serif;
+  font-size: 150px;
+  line-height: 1;
+  color: #17392f;
+}
+
+.about-copy p {
+  font-size: 18px;
+  margin-bottom: 22px;
+  max-width: 750px;
+}
+
+/* STATEMENT */
+
+.statement {
+  background: #101714;
+  color: white;
+  text-align: center;
+  padding: 130px 8%;
+}
+
+.statement h2 {
+  font-size: clamp(44px, 7vw, 95px);
+  line-height: 1;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.statement em {
+  color: #d4bd86;
+}
+
+/* JOURNEY */
+
+.journey {
+  background: white;
+}
+
+.timeline {
+  border-top: 1px solid #aaa;
+  margin-top: 60px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+  gap: 40px;
+  padding: 35px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.timeline-item strong {
+  color: #17392f;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* CREDENTIALS */
+
+.credentials {
+  background: #17392f;
+  color: white;
+}
+
+.credentials .section-label {
+  color: #d4bd86;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: rgba(255,255,255,.2);
+  margin-top: 50px;
+}
+
+.card {
+  background: #17392f;
+  padding: 45px;
+  min-height: 200px;
+}
+
+.card h3 {
+  font-size: 29px;
+  margin-bottom: 12px;
+  color: #d4bd86;
+}
+
+/* SPEAKING */
+
+.speaking {
+  background: #e8dfcf;
+}
+
+.speaking-intro {
+  max-width: 850px;
+  font-size: 20px;
+  margin-bottom: 45px;
+}
+
+.topics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.topic {
+  border: 1px solid #17392f;
+  border-radius: 100px;
+  padding: 12px 20px;
+  font-size: 14px;
+}
+
+/* BOOK */
+
+.book {
+  background: #101714;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.book-title {
+  font-size: clamp(50px, 7vw, 95px);
+  line-height: .9;
+  color: #d4bd86;
+}
+
+.book-copy p {
+  font-size: 18px;
+  margin: 25px 0 35px;
+}
+
+/* CONTACT */
+
+.contact {
+  background: #d4bd86;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: clamp(48px, 7vw, 100px);
+  line-height: .95;
+  color: #17392f;
+  max-width: 950px;
+  margin: 0 auto 30px;
+}
+
+.contact p {
+  max-width: 650px;
+  margin: 0 auto 35px;
+  font-size: 18px;
+}
+
+.contact .button {
+  background: #17392f;
+  color: white;
+  border-color: #17392f;
+}
+
+/* FOOTER */
+
+footer {
+  background: #101714;
+  color: #bbb;
+  padding: 35px 8%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+  nav {
+    padding: 20px 6%;
+  }
+
+  .navlinks {
+    display: none;
+  }
+
+  .hero {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .hero-image {
+    min-height: 57vh;
+    background-image:
+      linear-gradient(to top, #17392f 0%, transparent 35%),
+      url('D98D0CC6-8F24-44CA-934C-8497C6859DCA.jpeg');
+    background-position: center top;
+  }
+
+  .hero-copy {
+    padding: 25px 7% 70px;
+  }
+
+  .hero h1 {
+    font-size: 58px;
+  }
+
+  section {
+    padding: 75px 7%;
+  }
+
+  .about,
+  .book {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .big-number {
+    font-size: 90px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">JW.</div>
+
+  <div class="navlinks">
+    <a href="#about">About</a>
+    <a href="#journey">Journey</a>
+    <a href="#speaking">Speaking</a>
+    <a href="#book">Book</a>
+    <a href="#invite">Invite</a>
+  </div>
+</nav>
+
+<header class="hero">
+
+  <div class="hero-copy">
+
+    <div class="eyebrow">Pastor • Educator • Youth Advocate • Speaker</div>
+
+    <h1>
+      JUSTIN
+      <span>WILSON.</span>
+    </h1>
+
+    <p class="hero-description">
+      Developing people. Strengthening faith. Building the next generation.
+    </p>
+
+    <div class="buttons">
+      <a href="#invite" class="button primary">Invite Justin</a>
+      <a href="#about" class="button">Meet Justin</a>
+    </div>
+
+  </div>
+
+  <div class="hero-image"></div>
+
+</header>
+
+
+<section id="about" class="about">
+
+  <div>
+    <div class="section-label">Meet Justin</div>
+    <div class="big-number">15.</div>
+    <p>The age the journey behind the pulpit began.</p>
+  </div>
+
+  <div class="about-copy">
+
+    <h2 class="section-title">Called early.<br>Still building.</h2>
+
+    <p>
+      Pastor Justin Wilson, A.A. is an ordained pastor, educator,
+      youth advocate and speaker committed to developing the next generation.
+    </p>
+
+    <p>
+      A native of Brownsville, Tennessee, Justin began preaching at age 15.
+      After graduating high school in 2009, he founded CrossBoys, a Christian
+      hip-hop ministry that traveled nationally sharing the Gospel through
+      music and testimony in schools, churches, correctional facilities
+      and communities.
+    </p>
+
+    <p>
+      His journey has included education, juvenile corrections,
+      community service, pastoral leadership and next-generation ministry.
+      Today he serves as Associate Pastor and Director of Youth Ministry
+      at Eagle Heights Cathedral.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="statement">
+
+  <div class="section-label">The Mission</div>
+
+  <h2>
+    Biblical truth for the <em>Church,</em>
+    the classroom & the next generation.
+  </h2>
+
+</section>
+
+
+<section id="journey" class="journey">
+
+  <div class="section-label">The Journey</div>
+
+  <h2 class="section-title">
+    Every season<br>prepared the next.
+  </h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <strong>Age 15</strong>
+      <div>
+        <h3>Began Preaching</h3>
+        <p>A calling discovered early became a lifelong commitment to communicating the Gospel.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <strong>2009</strong>
+      <div>
+        <h3>Graduated High School</h3>
+        <p>A new chapter began beyond Brownsville, Tennessee.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <strong>CrossBoys</strong>
+      <div>
+        <h3>National Christian Hip-Hop Ministry</h3>
+        <p>Music and testimony opened doors in churches, schools, communities and correctional facilities across the country.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <strong>Service</strong>
+      <div>
+        <h3>Education & Juvenile Corrections</h3>
+        <p>Serving young people beyond the walls of the church strengthened a passion for youth, families and education.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <strong>Today</strong>
+      <div>
+        <h3>Pastoral Leadership</h3>
+        <p>Associate Pastor and Director of Youth Ministry at Eagle Heights Cathedral.</p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="credentials">
+
+  <div class="section-label">Education • Training • Development</div>
+
+  <h2 class="section-title">
+    Prepared<br>for the work.
+  </h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Eagle Heights Bible College</h3>
+      <p>Associate of Arts in Biblical Theology</p>
+      <p><strong>Cum Laude</strong></p>
+    </div>
+
+    <div class="card">
+      <h3>Beyond the Walls</h3>
+      <p>Beyond the Walls International Fellowship</p>
+      <p><strong>Ordained Pastor</strong></p>
+    </div>
+
+    <div class="card">
+      <h3>Ministerial Formation</h3>
+      <p>Ministerial training, valedictorian graduation and pastoral ordination through DRIGS FCA.</p>
+    </div>
+
+    <div class="card">
+      <h3>Leadership Development</h3>
+      <p>Breakfast With Bishop mentoring and Maximum Man development program.</p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<section id="speaking" class="speaking">
+
+  <div class="section-label">Speaking</div>
+
+  <h2 class="section-title">
+    A voice for<br>the next generation.
+  </h2>
+
+  <p class="speaking-intro">
+    Pastor Justin communicates biblical truth through practical teaching,
+    storytelling and a passion for helping people recognize their
+    God-given identity, purpose and responsibility.
+  </p>
+
+  <div class="topics">
+    <div class="topic">Youth & Next Generation</div>
+    <div class="topic">Faith & Identity</div>
+    <div class="topic">Christian Leadership</div>
+    <div class="topic">Education & Educators</div>
+    <div class="topic">Men's Development</div>
+    <div class="topic">Church & Ministry Leadership</div>
+  </div>
+
+  <a href="#invite" class="button primary">Invite Pastor Justin</a>
+
+</section>
+
+
+<section id="book" class="book">
+
+  <div>
+    <div class="section-label">Coming Soon</div>
+
+    <h2 class="book-title">
+      THE<br>
+      ANATOMY<br>
+      OF A<br>
+      YOUNG MAN
+    </h2>
+  </div>
+
+  <div class="book-copy">
+
+    <h3>A story of becoming.</h3>
+
+    <p>
+      A personal exploration of manhood, identity, faith,
+      failure, restoration and becoming the man God intended.
+    </p>
+
+    <p>
+      <em>The Anatomy of a Young Man</em> traces the moments,
+      decisions, wounds and relationships that helped shape
+      Justin's journey from Brownsville to ministry leadership.
+    </p>
+
+    <span class="button">Coming Soon</span>
+
+  </div>
+
+</section>
+
+
+<section id="invite" class="contact">
+
+  <div class="section-label">Speaking • Ministry • Leadership</div>
+
+  <h2>Let's build something that matters.</h2>
+
+  <p>
+    Pastor Justin is available for churches, conferences,
+    youth gatherings, educator events, men's gatherings
+    and leadership experiences.
+  </p>
+
+  <a href="mailto:YOUR-EMAIL-HERE" class="button">
+    Invite Pastor Justin
+  </a>
+
+</section>
+
+
+<footer>
+
+  <div>
+    © 2026 Justin Wilson. All Rights Reserved.
+  </div>
+
+  <div>
+    Pastor • Educator • Youth Advocate • Speaker
+  </div>
+
+</footer>
+
+</body>
+</html>
