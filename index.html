@@ -413,6 +413,65 @@ section {
         font-size: 34px;
     }
 }
+      }
+}
+
+/* SPEAKING ACCORDION HEADINGS */
+
+.speaking-topic {
+    border-top: 1px solid #343534;
+}
+
+.speaking-topic:last-child {
+    border-bottom: 1px solid #343534;
+}
+
+.speaking-topic summary {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding: 24px 0;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1.2;
+    color: #f4efe5;
+}
+
+.speaking-topic summary::-webkit-details-marker {
+    display: none;
+}
+
+.speaking-topic summary::marker {
+    content: "";
+}
+
+.accordion-icon {
+    color: #c7a76b;
+    font-size: 26px;
+    font-weight: 300;
+    flex-shrink: 0;
+    transition: transform .25s ease;
+}
+
+.speaking-topic[open] .accordion-icon {
+    transform: rotate(45deg);
+}
+
+@media (max-width: 768px) {
+    .speaking-topic summary {
+        font-size: 22px;
+        padding: 20px 0;
+    }
+
+    .accordion-icon {
+        font-size: 24px;
+    }
+}
+
+/* CREDENTIALS */
 /* CREDENTIALS */
 
 .credentials {
