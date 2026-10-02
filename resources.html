@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>PJ Resources | Pastor Justin Wilson</title>
+
+  <!-- Memberstack -->
+  <script
+    data-memberstack-app="app_cmur1nd0s00740sw315a7dorf"
+    src="https://static.memberstack.com/scripts/v2/memberstack.js"
+    type="text/javascript">
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    :root {
+      --green: #183f32;
+      --green-light: #285d4b;
+      --cream: #f2eee5;
+      --tan: #c6aa7b;
+      --black: #0c0d0c;
+      --white: #ffffff;
+      --gray: #aaa9a5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--black);
+      font-family: "Montserrat", sans-serif;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      background: var(--green);
+      color: var(--white);
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      font-weight: 600;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-right a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .logout {
+      border: 1px solid var(--tan);
+      padding: 10px 18px;
+    }
+
+    /* HERO */
+
+    .resource-hero {
+      background: var(--green);
+      color: var(--white);
+      padding: 100px 7% 110px;
+    }
+
+    .eyebrow {
+      color: var(--tan);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      margin-bottom: 25px;
+    }
+
+    .resource-hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(60px, 8vw, 110px);
+      font-weight: 400;
+      line-height: .85;
+      margin-bottom: 35px;
+    }
+
+    .resource-hero h1 span {
+      color: var(--tan);
+      font-style: italic;
+    }
+
+    .welcome {
+      max-width: 650px;
+      color: #dedbd4;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    /* LIBRARY */
+
+    .library {
+      padding: 100px 7%;
+    }
+
+    .section-label {
+      color: var(--green);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    .library h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(45px, 6vw, 75px);
+      font-weight: 500;
+      line-height: .95;
+      margin-bottom: 65px;
+    }
+
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid #b8b1a5;
+      border-bottom: 1px solid #b8b1a5;
+    }
+
+    .resource-card {
+      padding: 45px 35px 45px 0;
+      min-height: 330px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .resource-card + .resource-card {
+      border-left: 1px solid #b8b1a5;
+      padding-left: 35px;
+    }
+
+    .resource-card span {
+      color: var(--green);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+
+    .resource-card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 42px;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 20px;
+    }
+
+    .resource-card p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+      max-width: 330px;
+    }
+
+    .resource-card a {
+      margin-top: auto;
+      color: var(--green);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .resource-card a:hover {
+      color: var(--tan);
+    }
+
+    /* PREMIUM */
+
+    .premium {
+      background: var(--black);
+      color: var(--white);
+      padding: 80px 7%;
+    }
+
+    .premium-label {
+      color: var(--tan);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    .premium h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(42px, 5vw, 65px);
+      font-weight: 500;
+      margin-bottom: 20px;
+    }
+
+    .premium p {
+      color: var(--gray);
+      max-width: 600px;
+      line-height: 1.8;
+    }
+
+    .coming-soon {
+      display: inline-block;
+      margin-top: 30px;
+      border: 1px solid var(--tan);
+      color: var(--tan);
+      padding: 12px 18px;
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: var(--green);
+      color: #c9c8c2;
+      padding: 35px 7%;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+
+      .resource-hero {
+        padding-top: 75px;
+        padding-bottom: 80px;
+      }
+
+      .nav-right a:first-child {
+        display: none;
+      }
+
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .resource-card {
+        padding: 35px 0;
+        min-height: 260px;
+      }
+
+      .resource-card + .resource-card {
+        border-left: none;
+        border-top: 1px solid #b8b1a5;
+        padding-left: 0;
+      }
+
+      .library {
+        padding-top: 75px;
+        padding-bottom: 75px;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+    <a href="/" class="brand">
+      JUSTIN WILSON
+    </a>
+
+    <div class="nav-right">
+
+      <a href="/">
+        BACK TO WEBSITE
+      </a>
+
+      <a href="#" data-ms-action="logout" class="logout">
+        LOG OUT
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- MEMBER HERO -->
+
+  <section class="resource-hero">
+
+    <div class="eyebrow">
+      PJ RESOURCES
+    </div>
+
+    <h1>
+      Grow deeper.<br>
+      <span>Live it out.</span>
+    </h1>
+
+    <p class="welcome">
+      Welcome, <strong data-ms-member="first-name">Friend</strong>.
+      This space was created to help you grow in your faith,
+      discover your purpose and live out who God created you to be.
+    </p>
+
+  </section>
+
+
+  <!-- RESOURCE LIBRARY -->
+
+  <section class="library">
+
+    <div class="section-label">
+      YOUR LIBRARY
+    </div>
+
+    <h2>
+      Something to help<br>
+      you grow.
+    </h2>
+
+
+    <div class="resource-grid">
+
+
+      <!-- DEVOTIONALS -->
+
+      <div class="resource-card">
+
+        <span>READ</span>
+
+        <h3>
+          Devotionals
+        </h3>
+
+        <p>
+          Scripture-centered devotionals designed to help you
+          slow down, hear from God and strengthen your walk with Christ.
+        </p>
+
+        <a href="#">
+          READ DEVOTIONALS →
+        </a>
+
+      </div>
+
+
+      <!-- TEACHING -->
+
+      <div class="resource-card">
+
+        <span>WATCH</span>
+
+        <h3>
+          Teaching & Messages
+        </h3>
+
+        <p>
+          Biblical teaching, sermons and conversations created
+          to help you understand Scripture and apply it to everyday life.
+        </p>
+
+        <a href="#">
+          START WATCHING →
+        </a>
+
+      </div>
+
+
+      <!-- DOWNLOADS -->
+
+      <div class="resource-card">
+
+        <span>USE</span>
+
+        <h3>
+          Downloads
+        </h3>
+
+        <p>
+          Study guides, reflection sheets and practical resources
+          you can use personally or with others.
+        </p>
+
+        <a href="#">
+          EXPLORE RESOURCES →
+        </a>
+
+      </div>
+
+
+    </div>
+
+  </section>
+
+
+  <!-- PREMIUM -->
+
+  <section class="premium">
+
+    <div class="premium-label">
+      PJ+
+    </div>
+
+    <h2>
+      Go deeper.
+    </h2>
+
+    <p>
+      Extended teaching series, courses, exclusive video content
+      and additional resources are coming to the PJ Resources library.
+    </p>
+
+    <div class="coming-soon">
+      COMING SOON
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Justin Wilson. All Rights Reserved.
+  </footer>
+
+
+</body>
+</html>
