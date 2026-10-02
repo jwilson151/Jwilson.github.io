@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Devotionals | PJ Resources</title>
+
+  <!-- Memberstack -->
+  <script
+    data-memberstack-app="app_cmur1nd0s00740sw315a7dorf"
+    src="https://static.memberstack.com/scripts/v2/memberstack.js"
+    type="text/javascript">
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+
+    :root {
+      --green: #183f32;
+      --green-light: #285d4b;
+      --cream: #f2eee5;
+      --tan: #c6aa7b;
+      --black: #0c0d0c;
+      --white: #ffffff;
+      --gray: #aaa9a5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--black);
+      font-family: "Montserrat", sans-serif;
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+      background: var(--green);
+      color: var(--white);
+      padding: 22px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 25px;
+      font-weight: 600;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-right a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+    }
+
+    .logout {
+      border: 1px solid var(--tan);
+      padding: 10px 18px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+      background: var(--green);
+      color: var(--white);
+      padding: 90px 7% 100px;
+    }
+
+    .eyebrow {
+      color: var(--tan);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 4px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(60px, 8vw, 105px);
+      font-weight: 400;
+      line-height: .85;
+      margin-bottom: 35px;
+    }
+
+    .hero h1 span {
+      color: var(--tan);
+      font-style: italic;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #ddd9d0;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+
+    /* DEVOTIONAL LIBRARY */
+
+    .library {
+      padding: 90px 7% 110px;
+    }
+
+    .section-label {
+      color: var(--green);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    .library-heading {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(42px, 5vw, 68px);
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 60px;
+    }
+
+    .devotional-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid #b8b1a5;
+      border-bottom: 1px solid #b8b1a5;
+    }
+
+    .devotional-card {
+      padding: 40px 35px 45px 0;
+      min-height: 360px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .devotional-card + .devotional-card {
+      border-left: 1px solid #b8b1a5;
+      padding-left: 35px;
+    }
+
+    .devotional-number {
+      color: var(--green);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 25px;
+    }
+
+    .devotional-card h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 1;
+      margin-bottom: 15px;
+    }
+
+    .scripture {
+      color: #846f4b;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 20px;
+    }
+
+    .devotional-card p {
+      color: #555;
+      font-size: 14px;
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .devotional-card a {
+      margin-top: auto;
+      color: var(--green);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+    .devotional-card a:hover {
+      color: var(--tan);
+    }
+
+
+    /* BACK SECTION */
+
+    .back-section {
+      background: var(--black);
+      color: var(--white);
+      padding: 65px 7%;
+    }
+
+    .back-section span {
+      display: block;
+      color: var(--tan);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+
+    .back-section h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 48px;
+      font-weight: 500;
+      margin-bottom: 25px;
+    }
+
+    .back-section a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+      background: var(--green);
+      color: #c9c8c2;
+      padding: 35px 7%;
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+
+    /* MOBILE */
+
+    @media (max-width: 768px) {
+
+      .hero {
+        padding-top: 70px;
+        padding-bottom: 75px;
+      }
+
+      .nav-right a:first-child {
+        display: none;
+      }
+
+      .devotional-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .devotional-card {
+        padding: 35px 0;
+        min-height: 300px;
+      }
+
+      .devotional-card + .devotional-card {
+        border-left: none;
+        border-top: 1px solid #b8b1a5;
+        padding-left: 0;
+      }
+
+      .library {
+        padding-top: 70px;
+        padding-bottom: 80px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <!-- NAV -->
+
+  <nav>
+
+    <a href="/" class="brand">
+      JUSTIN WILSON
+    </a>
+
+    <div class="nav-right">
+
+      <a href="/resources.html">
+        PJ RESOURCES
+      </a>
+
+      <a href="#" data-ms-action="logout" class="logout">
+        LOG OUT
+      </a>
+
+    </div>
+
+  </nav>
+
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <div class="eyebrow">
+      PJ RESOURCES / DEVOTIONALS
+    </div>
+
+    <h1>
+      Slow down.<br>
+      <span>Hear God.</span>
+    </h1>
+
+    <p>
+      Scripture-centered devotionals created to help you grow
+      in your relationship with Christ, understand His Word
+      and carry truth into everyday life.
+    </p>
+
+  </section>
+
+
+  <!-- DEVOTIONAL LIBRARY -->
+
+  <section class="library">
+
+    <div class="section-label">
+      DEVOTIONAL LIBRARY
+    </div>
+
+    <h2 class="library-heading">
+      Something for<br>
+      where you are.
+    </h2>
+
+
+    <div class="devotional-grid">
+
+
+      <!-- ====================================== -->
+      <!-- DEVOTIONAL CARD 01 -->
+      <!-- ====================================== -->
+
+      <article class="devotional-card">
+
+        <div class="devotional-number">
+          DEVOTIONAL 01
+        </div>
+
+        <h2>
+          Can God Be Trusted?
+        </h2>
+
+        <div class="scripture">
+          PROVERBS 3:5–6
+        </div>
+
+        <p>
+          What does trusting God look like when you cannot see
+          what He is doing? A devotional about faith beyond
+          what we can understand.
+        </p>
+
+        <a href="/devotionals/can-god-be-trusted.html">
+          READ DEVOTIONAL →
+        </a>
+
+      </article>
+
+
+      <!-- ====================================== -->
+      <!-- DEVOTIONAL CARD 02 -->
+      <!-- CHANGE THIS WHEN ADDING A DEVOTIONAL -->
+      <!-- ====================================== -->
+
+      <article class="devotional-card">
+
+        <div class="devotional-number">
+          DEVOTIONAL 02
+        </div>
+
+        <h2>
+          Identity in Christ
+        </h2>
+
+        <div class="scripture">
+          ISAIAH 43:1
+        </div>
+
+        <p>
+          Before you understand what you are called to do,
+          you must understand who you belong to.
+        </p>
+
+        <a href="#">
+          COMING SOON →
+        </a>
+
+      </article>
+
+
+      <!-- ====================================== -->
+      <!-- DEVOTIONAL CARD 03 -->
+      <!-- CHANGE THIS WHEN ADDING A DEVOTIONAL -->
+      <!-- ====================================== -->
+
+      <article class="devotional-card">
+
+        <div class="devotional-number">
+          DEVOTIONAL 03
+        </div>
+
+        <h2>
+          Even Still
+        </h2>
+
+        <div class="scripture">
+          PSALM 73
+        </div>
+
+        <p>
+          Faith does not require pretending everything is okay.
+          God can still be good even when life does not feel good.
+        </p>
+
+        <a href="#">
+          COMING SOON →
+        </a>
+
+      </article>
+
+
+      <!-- ====================================== -->
+      <!-- ADD FUTURE DEVOTIONAL CARDS HERE -->
+      <!-- ====================================== -->
+
+
+    </div>
+
+  </section>
+
+
+  <!-- RETURN TO LIBRARY -->
+
+  <section class="back-section">
+
+    <span>
+      PJ RESOURCES
+    </span>
+
+    <h2>
+      Keep growing.
+    </h2>
+
+    <a href="/resources.html">
+      ← BACK TO RESOURCE LIBRARY
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Justin Wilson. All Rights Reserved.
+  </footer>
+
+
+</body>
+
+</html>
