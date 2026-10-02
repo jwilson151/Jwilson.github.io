@@ -380,9 +380,11 @@
       that God was intentional when He made you?
     </p>
 
-    <a href="/devotionals/can-god-be-trusted-v2-week-1.html">
-      READ DEVOTIONAL →
-    </a>
+    <a href="/devotionals/can-god-be-trusted-v2-week-1.html"
+   class="weekly-devotional"
+   data-release="2026-10-04">
+  READ DEVOTIONAL →
+</a>
 
   </article>
 
@@ -409,9 +411,11 @@
       and says you are His.
     </p>
 
-    <a href="/devotionals/can-god-be-trusted-v2-week-2.html">
-      READ DEVOTIONAL →
-    </a>
+  <a href="/devotionals/can-god-be-trusted-v2-week-2.html"
+   class="weekly-devotional"
+   data-release="2026-10-11">
+  READ DEVOTIONAL →
+</a>
 
   </article>
 
@@ -438,9 +442,11 @@
       you and still invites you close.
     </p>
 
-    <a href="/devotionals/can-god-be-trusted-v2-week-3.html">
-      READ DEVOTIONAL →
-    </a>
+    <a href="/devotionals/can-god-be-trusted-v2-week-3.html"
+   class="weekly-devotional"
+   data-release="2026-10-18">
+  READ DEVOTIONAL →
+</a>
 
   </article>
 
@@ -467,9 +473,11 @@
       God created you to be.
     </p>
 
-    <a href="/devotionals/can-god-be-trusted-v2-week-4.html">
-      READ DEVOTIONAL →
-    </a>
+    <a href="/devotionals/can-god-be-trusted-v2-week-4.html"
+   class="weekly-devotional"
+   data-release="2026-10-25">
+  READ DEVOTIONAL →
+</a>
 
   </article>
 
@@ -496,9 +504,11 @@
       so your life can point people toward Jesus.
     </p>
 
-    <a href="/devotionals/can-god-be-trusted-v2-week-5.html">
-      READ DEVOTIONAL →
-    </a>
+    <a href="/devotionals/can-god-be-trusted-v2-week-5.html"
+   class="weekly-devotional"
+   data-release="2026-11-01">
+  READ DEVOTIONAL →
+</a>
 
   </article>
 
@@ -529,9 +539,42 @@
   <!-- FOOTER -->
 
   <footer>
-    © 2026 Justin Wilson. All Rights Reserved.
-  </footer>
+  © 2026 Justin Wilson. All Rights Reserved.
+</footer>
 
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+
+    const devotionals = document.querySelectorAll(".weekly-devotional");
+
+    devotionals.forEach(function(link) {
+
+      const releaseDate = new Date(link.dataset.release + "T00:00:00");
+      const today = new Date();
+
+      if (today < releaseDate) {
+
+        const options = {
+          month: "short",
+          day: "numeric"
+        };
+
+        link.textContent =
+          "COMING " +
+          releaseDate.toLocaleDateString("en-US", options).toUpperCase();
+
+        link.removeAttribute("href");
+
+        link.style.cursor = "default";
+        link.style.opacity = ".55";
+        link.style.pointerEvents = "none";
+
+      }
+
+    });
+
+  });
+</script>
 
 </body>
 
